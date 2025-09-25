@@ -3,10 +3,10 @@ class Solution {
         int[] ans = new int[n+1];
         for(int i=0;i<=n;i++){
             int count=0;
-            if(i==0){
-                ans[i]=0;
-                continue;
-            }
+            // if(i==0){
+            //     ans[i]=0;
+            //     continue;
+            // }
             int temp =i;
            while(temp!=0){
             count+=temp&1;
