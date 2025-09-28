@@ -19,14 +19,36 @@ class Solution {
 
         //Dutch National Flag Algorithm
 
+        // int start=0;
+        // int middle=0;
+        // int end=nums.length-1;
+        // while(middle<=end){
+        //     if(nums[middle]==0){
+        //         int temp=nums[middle];
+        //         nums[middle]=nums[start];
+        //         nums[start]=temp;
+        //         middle++;
+        //         start++;
+        //     }
+        //     else if(nums[middle]==1){
+        //         middle++;
+        //     }
+        //     else if(nums[middle]==2){
+        //         int temp =nums[middle];
+        //         nums[middle]=nums[end];
+        //         nums[end]=temp;
+        //         end--;
+        //     }
+        // }
+
         int start=0;
         int middle=0;
         int end=nums.length-1;
         while(middle<=end){
             if(nums[middle]==0){
-                int temp=nums[middle];
-                nums[middle]=nums[start];
-                nums[start]=temp;
+                int temp=nums[start];
+                nums[start]=nums[middle];
+                nums[middle]=temp;
                 middle++;
                 start++;
             }
@@ -34,9 +56,9 @@ class Solution {
                 middle++;
             }
             else if(nums[middle]==2){
-                int temp =nums[middle];
-                nums[middle]=nums[end];
-                nums[end]=temp;
+                int temp=nums[end];
+                nums[end]=nums[middle];
+                nums[middle]=temp;
                 end--;
             }
         }
