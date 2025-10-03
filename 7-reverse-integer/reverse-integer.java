@@ -1,6 +1,5 @@
 class Solution {
     public int reverse(int x) {
-        // int y=Math.abs(x);
         int reverse=0;
         while(x!=0){
             int temp=x%10;
